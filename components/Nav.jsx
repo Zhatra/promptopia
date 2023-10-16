@@ -10,7 +10,7 @@ function Nav() {
     const isUserLoggedIn = true;
 
     const [providers, setProviders] = useState(null);
-
+    //this is for the loggin 
     useEffect(() => {
       const setProviders = async () =>{
           const response = await getProviders();
@@ -74,6 +74,37 @@ function Nav() {
           </>
         )}
       </div>
+
+      {/**Mobile Navigation */}
+      <div className='sm:hidden flex relative'>
+        {isUserLoggedIn ?(
+          <div className='flex'>
+            <Image
+                src="/assets/images/logo.svg"
+                width={37}
+                height={37}
+                className="rounded-full"
+                alt="profile"
+                onClick= {()=>{}}
+              />
+          </div>
+        ):(
+          
+            <>
+              {providers && Object.values(providers).map((provider) => (
+                <button
+                  type = "button"
+                  key = {provider.name}
+                  onClick={() => signIn(provider.id)}
+                  className='black_btn'
+                >
+                  Sing In
+                </button>
+              ))}
+            </>
+          )}
+      </div>
+
     </nav>
   );
 }
