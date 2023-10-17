@@ -10,6 +10,7 @@ function Nav() {
     const isUserLoggedIn = true;
 
     const [providers, setProviders] = useState(null);
+    const [first, setfirst] = useState(second)
     //this is for the loggin 
     useEffect(() => {
       const setProviders = async () =>{
@@ -110,3 +111,4 @@ function Nav() {
 }
 
 export default Nav
+
