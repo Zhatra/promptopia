@@ -10,7 +10,7 @@ function Nav() {
     const isUserLoggedIn = true;
 
     const [providers, setProviders] = useState(null);
-    const [first, setfirst] = useState(second)
+    const [toggleDropdown, setToggleDropdown] = useState(false);
     //this is for the loggin 
     useEffect(() => {
       const setProviders = async () =>{
@@ -86,7 +86,7 @@ function Nav() {
                 height={37}
                 className="rounded-full"
                 alt="profile"
-                onClick= {()=>{}}
+                onClick= {()=>setToggleDropdown((prev)=> !prev)}
               />
           </div>
         ):(
