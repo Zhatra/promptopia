@@ -1,3 +1,34 @@
+/**
+ * `components/Nav.jsx`: Define el componente de navegación (Nav) para la aplicación.
+ *
+ * Uso del cliente:
+ * - Utiliza la directiva `"use client"` para asegurar que se ejecute solo en el lado del cliente.
+ *
+ * Importaciones:
+ * - `Link` y `Image` de Next.js para la navegación y la optimización de imágenes.
+ * - Hooks de React y NextAuth para manejar el estado y la sesión del usuario.
+ *
+ * Componente `Nav`:
+ * - Utiliza el hook `useSession` de NextAuth para acceder a los datos de sesión del usuario.
+ * - Estado `providers` para almacenar los proveedores de autenticación.
+ * - Estado `toggleDropdown` para manejar la visibilidad del menú desplegable en móviles.
+ *
+ * useEffect:
+ * - Obtiene los proveedores de autenticación y actualiza el estado `providers`.
+ *
+ * Estructura del Componente:
+ * - Navegación con logo y enlace a la página principal.
+ * - Navegación para escritorio y móvil:
+ *   - Si el usuario está autenticado, muestra opciones de crear post, salir y un enlace al perfil.
+ *   - Si no está autenticado, muestra botones para iniciar sesión con los proveedores disponibles.
+ * - Manejo de clics para la autenticación y navegación.
+ *
+ * Renderizado:
+ * - Navegación para escritorio y móvil con lógica condicional basada en la sesión del usuario.
+ *
+ * Exportación:
+ * - Exporta `Nav` como componente predeterminado.
+ */
 "use client";
 
 import Link from "next/link";

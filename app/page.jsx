@@ -1,3 +1,20 @@
+/**
+ * Página principal de la aplicación, definida en `app/page.jsx`.
+ * Utiliza Next.js y componentes de Tailwind CSS para el estilo.
+ *
+ * Componentes:
+ * - `Feed`: Importado desde "@components/Feed", muestra contenido dinámico, posiblemente una lista de prompts.
+ *
+ * JSX:
+ * - `<section>`: Contenedor principal con estilo de flexbox y columna.
+ * - `<h1>`: Encabezado principal con texto "Discover & Share" y "AI-Powered Prompts" en un gradiente naranja.
+ * - `<p>`: Descripción de "Promptopia" como herramienta de prompting AI de código abierto.
+ * - `<Feed />`: Integración del componente Feed para mostrar contenido relevante.
+ *
+ * Exportación:
+ * - Exporta `Home` como componente predeterminado.
+ */
+
 import Feed from "@components/Feed";
 
 const Home = () => (

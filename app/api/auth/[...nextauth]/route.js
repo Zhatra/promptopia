@@ -1,3 +1,27 @@
+/**
+ * `app/api/auth/[...nextauth]/route.js`: Configura la autenticación para la aplicación usando NextAuth.
+ *
+ * Importaciones:
+ * - `NextAuth`: Biblioteca principal para manejar la autenticación.
+ * - `GoogleProvider`: Proveedor de autenticación de Google.
+ * - Modelo `User` y función `connectToDB` para interacciones con MongoDB.
+ *
+ * Handler de NextAuth:
+ * - Define el proveedor de autenticación de Google con credenciales de entorno.
+ * - Implementa callbacks para la sesión y el proceso de inicio de sesión.
+ *
+ * Callbacks:
+ * - `session`: Encontrar y adjuntar la ID de usuario de MongoDB a la sesión actual.
+ * - `signIn`: Gestiona el inicio de sesión.
+ *   - Conecta a la base de datos.
+ *   - Verifica si el usuario ya existe en la base de datos.
+ *   - Si no existe, crea y guarda un nuevo usuario.
+ *   - Captura y registra errores durante la verificación.
+ *
+ * Exportación:
+ * - Exporta `handler` como métodos GET y POST, compatibles con las rutas de autenticación de NextAuth.
+ */
+
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 

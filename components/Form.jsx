@@ -1,3 +1,33 @@
+/**
+ * `Form`: Un componente reutilizable para crear o editar prompts.
+ *
+ * Importaciones:
+ * - `Link` de Next.js para la navegación.
+ *
+ * Parámetros del Componente:
+ * - `type`: Indica el tipo de operación (Crear o Editar).
+ * - `post`: Objeto que contiene la información del prompt.
+ * - `setPost`: Función para actualizar el estado `post`.
+ * - `submitting`: Estado que indica si el formulario está en proceso de envío.
+ * - `handleSubmit`: Función manejadora para el envío del formulario.
+ *
+ * Estructura del Componente:
+ * - Sección con clases de estilo para el ancho y disposición del formulario.
+ * - `<h1>` y `<p>`: Textos que indican el propósito y describen la acción del formulario.
+ *
+ * Formulario:
+ * - Se activa `handleSubmit` al enviar el formulario.
+ * - Dos campos con etiquetas (`label`):
+ *   - Área de texto para escribir el prompt.
+ *   - Campo de entrada para especificar el tag del prompt.
+ * - Cada campo tiene su propio manejador de eventos para actualizar el estado `post`.
+ * - Botones para cancelar y enviar, con enlace de retorno a la página principal y botón de envío, respectivamente.
+ * - El botón de envío se deshabilita cuando `submitting` es verdadero y cambia su texto según el estado.
+ *
+ * Exportación:
+ * - Exporta `Form` como componente predeterminado.
+ */
+
 import Link from "next/link";
 
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {

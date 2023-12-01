@@ -1,3 +1,34 @@
+/**
+ * `components/PromptCard.jsx`: Define un componente para visualizar y manejar acciones en un prompt individual.
+ *
+ * Uso del cliente:
+ * - Utiliza la directiva `"use client"` para garantizar que el componente se ejecute solo en el lado del cliente.
+ *
+ * Importaciones:
+ * - Hooks de React y NextAuth para manejar el estado y la sesión del usuario.
+ * - `Image` de Next.js para la optimización de imágenes.
+ * - Hooks `usePathname` y `useRouter` de Next.js para la navegación.
+ *
+ * Parámetros del Componente `PromptCard`:
+ * - `post`: Objeto que contiene la información del prompt.
+ * - `handleEdit`: Función para editar el prompt.
+ * - `handleDelete`: Función para eliminar el prompt.
+ * - `handleTagClick`: Función para manejar el clic en el tag del prompt.
+ *
+ * Estructura y Funcionalidad:
+ * - Muestra información del creador del prompt y el contenido del prompt.
+ * - Proporciona botones para copiar el prompt, editar y eliminar, según las condiciones de la sesión y la ruta.
+ * - Manejadores de eventos para acciones como copiar el prompt, navegar al perfil del creador y ejecutar funciones de edición y eliminación.
+ *
+ * Renderizado:
+ * - Contenedor con información del creador y botón para copiar el prompt.
+ * - Muestra el contenido del prompt y su tag.
+ * - Opciones de edición y eliminación si el usuario es el creador y está en su perfil.
+ *
+ * Exportación:
+ * - Exporta `PromptCard` como componente predeterminado.
+ */
+
 "use client";
 
 import { useState } from "react";
